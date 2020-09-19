@@ -6,6 +6,7 @@ def tools = new org.devops.tools()
 
 String workspace = "/opt/jenkins/workspace"
 
+hello()
 pipeline {
     agent {
 	    node {
@@ -24,7 +25,6 @@ pipeline {
 	parameters {
         string(name: 'test', defaultValue: 'abcd', description: 'string?')
     }
-	hello()
 	stages {
 		//下载代码
 		stage ("下载代码"){
