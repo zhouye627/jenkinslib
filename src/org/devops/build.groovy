@@ -11,7 +11,7 @@ def Build(buildType,buildShell){
         sh """
             export NODEJS_HOME=/data/devops/node-v12.18.4-linux-x64 
             export PATH=\$PATH:\$NODEJS_HOME/bin
-            ${toolsHome}/bin/npm ${buildType}
+            ${toolsHome}/bin/npm ${buildShell}
             """
     } else {
         sh "${toolsHome}/bin/${buildType} ${buildShell}"
