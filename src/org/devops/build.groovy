@@ -5,7 +5,7 @@ package org.devops
 def Build(buildType,buildShell){
     build_dic = ['mvn':'M2','gradle':'GRADLE','npm':'NPM']
     
-    toolsHome = build_dic["${buildType}"]
+    toolsHome = tool build_dic["${buildType}"]
     
     if ("${buildType}" == "npm"){
         sh """
